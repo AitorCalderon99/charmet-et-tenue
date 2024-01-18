@@ -1,0 +1,38 @@
+// Colors
+$primary-color: #00ADB5;
+$secondary-color: #ECC30B;
+$white-text: #FFFFFF;
+$white-bg: #f5f5f5;
+$black: #000000;
+
+// Breakpoints
+$breakpoints: (
+  'small': 480px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1200px
+);
+
+// Fonts
+$default-fonts: 'Open Sans', Roboto, sans-serif;
+$cursive-fonts: 'Open Sans Italic', $default-fonts;
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/open-sans/OpenSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans Italic';
+  src: url('fonts/open-sans/OpenSans-Italic.ttf') format('truetype');
+}
+
+@mixin media-query($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint no definido: #{$breakpoint}.";
+  }
+}
