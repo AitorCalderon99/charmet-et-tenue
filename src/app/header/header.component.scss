@@ -3,31 +3,32 @@
 
 .header-container {
   background-color: $secondary-color;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  @include media-query('large') {
+    justify-content: space-around;
+  }
+
   width: 100%;
   padding: 0 1.4rem 0 1.4rem;
-  height: 8rem;
+  height: 8.5rem;
   transition: background-color 0.6s ease-in-out;
 
   .logo {
     cursor: pointer;
+
+    img {
+      height: 6rem;
+      align-self: auto;
+    }
   }
 
   &.scrolled {
     background-color: rgba(6, 9, 24, 0.4);
     border: 0.3px solid var(--white-bg);
-  }
-
-  img {
-    height: 16rem;
-    align-self: auto;
   }
 
   .navbar {
@@ -158,6 +159,6 @@
 }
 
 .fullscreen-nav.open {
-  z-index: 1;
+  z-index: 2;
   backdrop-filter: blur(3px);
 }
