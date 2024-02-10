@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './privacy-policy.component.html',
-  styleUrl: '../legal.scss'
 })
 export class PrivacyPolicyComponent {
 
