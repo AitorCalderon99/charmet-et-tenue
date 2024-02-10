@@ -19,6 +19,7 @@ $breakpoints: (
 // Fonts
 $default-fonts: 'Open Sans', Roboto, sans-serif;
 $cursive-fonts: 'Open Sans Italic', $default-fonts;
+$cursivest-fonts: 'Dancing Script', $cursive-fonts;
 
 @font-face {
   font-family: 'Open Sans';
@@ -28,6 +29,11 @@ $cursive-fonts: 'Open Sans Italic', $default-fonts;
 @font-face {
   font-family: 'Open Sans Italic';
   src: url('fonts/open-sans/OpenSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('fonts/DancingScript.ttf') format('truetype');
 }
 
 @mixin media-query($breakpoint) {
