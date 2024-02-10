@@ -1,6 +1,6 @@
 @import "styles/variables";
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -25,7 +25,6 @@ body {
   text-align: justify;
 
   h1 {
-    color: #333;
     text-align: center;
   }
 
@@ -46,5 +45,24 @@ body {
   p {
     color: #666;
     line-height: 1.6;
+  }
+}
+
+.highlight {
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.cursive-header {
+  color: $primary-color;
+  font-family: $cursivest-fonts;
+  font-size: 60px;
+  cursor: default;
+  margin-top: 20px;
+  transition: color 0.5s ease-in-out;
+
+
+  &:hover {
+    color: $secondary-color;
   }
 }
