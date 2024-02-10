@@ -2,11 +2,11 @@
 @import "../../styles/hamburguer";
 
 .header-container {
-  background-color: $secondary-color;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-between;
+  color: $primary-color;
 
   @include media-query('large') {
     justify-content: space-around;
@@ -50,7 +50,7 @@
         position: relative;
 
         a {
-          $hover-color: black;
+          $hover-color: $primary-color;
           position: relative;
           display: inline-block;
           padding: 10px;
@@ -96,9 +96,10 @@
           list-style-type: none;
           padding: 0;
           margin: 0;
+          min-width: 100%;
 
           li {
-            background-color: #fff;
+            background-color: $quaternary-color;
 
             a {
               display: block;
