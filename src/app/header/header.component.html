@@ -1,5 +1,5 @@
 <div class="header-container">
-  <a class="logo"><img src="assets/images/logo.png" alt="Logo"></a>
+  <a class="logo" [routerLink]="'/'"><img src="assets/images/logo.png" alt="Logo"></a>
 
   <div class="hamburguer">
     <div class="btn not-active" (click)="toggleHamburger()"
@@ -12,47 +12,45 @@
 
   <nav class="navbar">
     <ul>
-      <li><a class="hover-underline-animation">PERSONAL SHOPPER</a></li>
+      <li><a class="hover-underline-animation" [routerLink]="'personal-shopper'">PERSONAL SHOPPER</a></li>
       <li>
-        <a class="hover-underline-animation">SERVICIOS PARTICULARES</a>
+        <a class="hover-underline-animation" [routerLink]="'servicios-particulares'">SERVICIOS PARTICULARES</a>
         <ul>
-          <li><a>Asesoría de belleza</a></li>
-          <li><a>Análisis morfológico</a></li>
-          <li><a>Análisis de armario</a></li>
-          <li><a>Asesoría para bodas</a></li>
-          <li><a>Asesoría para hombres</a></li>
-          <li><a>Cambio step by step</a></li>
-          <li><a>Healthy styling</a></li>
-          <li><a>Asesoría de habilidades comunicativas</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-belleza'">Asesoría de belleza</a></li>
+          <li><a [routerLink]="'servicios-particulares/analisis-morfologico'">Análisis morfológico</a></li>
+          <li><a [routerLink]="'servicios-particulares/analisis-armario'">Análisis de armario</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-bodas'">Asesoría para bodas</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-hombres'">Asesoría para hombres</a></li>
+          <li><a [routerLink]="'servicios-particulares/cambio-step'">Cambio step by step</a></li>
+          <li><a [routerLink]="'servicios-particulares/healthy-styling'">Healthy styling</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-habilidades-comunicativas'">Asesoría de habilidades
+            comunicativas</a></li>
         </ul>
       </li>
       <li>
-        <a class="hover-underline-animation">ORGANIZACIÓN DE EVENTOS</a>
+        <a class="hover-underline-animation" [routerLink]="'organizacion-eventos'">ORGANIZACIÓN DE EVENTOS</a>
         <ul>
-          <li><a>Wedding planner</a></li>
-          <li><a>Entrega de premios</a></li>
-          <li><a>Convocatorias vip</a></li>
-          <li><a>Inauguraciones</a></li>
-          <li><a>Aniversarios de empresas</a></li>
-          <li><a>Presentaciones</a></li>
+          <li><a [routerLink]="'organizacion-eventos/wedding-planner'">Wedding planner</a></li>
+          <li><a [routerLink]="'organizacion-eventos/entrega-premios'">Entrega de premios</a></li>
+          <li><a [routerLink]="'organizacion-eventos/convocatorias-vip'">Convocatorias vip</a></li>
+          <li><a [routerLink]="'organizacion-eventos/inaguraciones'">Inauguraciones</a></li>
+          <li><a [routerLink]="'organizacion-eventos/aniversarios-empresas'">Aniversarios de empresas</a></li>
+          <li><a [routerLink]="'organizacion-eventos/presentaciones'">Presentaciones</a></li>
         </ul>
       </li>
       <li>
-        <a class="hover-underline-animation">CURSOS DE IMAGEN PERSONAL</a>
+        <a class="hover-underline-animation" [routerLink]="'imagen-personal'">CURSOS DE IMAGEN PERSONAL</a>
         <ul>
-          <li><a>Iniciación a la moda</a></li>
-          <li><a>Profesional de moda</a></li>
-          <li><a>Experto en moda</a></li>
+          <li><a [routerLink]="'imagen-personal/iniciacion-moda'">Iniciación a la moda</a></li>
+          <li><a [routerLink]="'imagen-personal/profesional-moda'">Profesional de moda</a></li>
+          <li><a [routerLink]="'imagen-personal/experto-moda'">Experto en moda</a></li>
         </ul>
       </li>
     </ul>
   </nav>
-
 </div>
 
 <span class="fullscreen-nav animate__animated"
       [ngClass]="{'animate__slideInRight': isHamburgerActive, 'open': isHamburgerActive, 'animate__slideOutRight': isHamburgerActive === false}">
-  <div class="nav-container">
-
-    </div>
+  <div class="nav-container"></div>
 </span>
