@@ -7,6 +7,9 @@
   text-align: center;
   justify-content: space-between;
   color: $primary-color;
+  border-bottom: 3px dotted $quaternary-color;
+  background-color: rgba($quaternary-color, 0.5);
+
 
   @include media-query('large') {
     justify-content: space-around;
