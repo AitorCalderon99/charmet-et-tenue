@@ -1,1 +1,29 @@
-<p>organizacion-eventos-index works!</p>
+<div class="main-text">
+  <h1 class="cursive-header highlight">Organización De Eventos</h1>
+  <h2>¡Diseña Eventos Inolvidables!</h2>
+
+  <p>En un mundo lleno de momentos, nosotros te ayudamos a hacer que los tuyos sean memorables. Si estás planeando un
+    gran lanzamiento de producto, una reunión íntima o un evento de gala, nuestros servicios de organización de eventos
+    están diseñados pensando en ti.</p>
+
+  <p>Ofrecemos una gama de soluciones personalizadas que se adaptan a tus visiones y metas. Desde la conceptualización
+    del evento hasta la ejecución, nuestro equipo de <span class=“highlight”>expertos</span> está listo para llevar tus
+    eventos al siguiente nivel.</p>
+
+  <p>Te invitamos a descubrir nuestros servicios a continuación. Cada uno de ellos ha sido meticulosamente diseñado para
+    ayudarte a crear eventos que dejen huella. Estamos aquí para apoyarte en cada paso, asegurándonos de que cada
+    detalle esté perfectamente cuidado.</p>
+
+  <p>Descubre cómo podemos dar vida a tus eventos y aumentar tu impacto.</p>
+</div>
+
+<div class="fx-container">
+  <div class="links-container">
+    <div *ngFor="let route of routes">
+      <div class="box">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </div>
+      <h3>{{ route.name }}</h3>
+    </div>
+  </div>
+</div>
