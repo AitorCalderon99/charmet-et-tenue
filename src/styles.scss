@@ -66,3 +66,41 @@ body {
     color: $secondary-color;
   }
 }
+
+.fx-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .links-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 64px;
+    margin: 40px;
+    max-width: 1320px; /* Añadido */
+
+    .box {
+      //background-image: url('ruta/a/tu/imagen.jpg');
+      background-color: #6c757d;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+}

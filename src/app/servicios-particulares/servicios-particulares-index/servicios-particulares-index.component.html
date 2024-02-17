@@ -1,1 +1,30 @@
-<p>servicios-particulares-index works!</p>
+<div class="main-text">
+  <h1 class="cursive-header highlight">Servicios Particulares</h1>
+  <h2>¡Transforma tu imagen!</h2>
+
+  <p>En un mundo donde la <span class="highlight">imagen</span> lo es todo, nosotros te ayudamos a destacar. Ya sea que
+    estés buscando un cambio de imagen personal, asesoramiento para un evento especial, o simplemente quieras sentirte
+    más seguro en tu día a día, nuestros servicios están diseñados para ti.</p>
+
+  <p>Aquí encontrarás una variedad de opciones personalizadas que se adaptan a tus necesidades y objetivos. Desde
+    asesoramiento de imagen y estilo, hasta consultoría de marca personal, nuestro equipo de <span class="highlight">expertos</span>
+    está listo para ayudarte a brillar.</p>
+
+  <p>Te invitamos a explorar nuestros servicios detallados a continuación. Cada uno de ellos ha sido cuidadosamente
+    diseñado para ayudarte a alcanzar tus metas de imagen y estilo. No importa cuál sea tu necesidad, estamos aquí para
+    guiarte en cada paso del camino.</p>
+
+  <p>Descubre cómo podemos transformar tu imagen y potenciar tu confianza. ¡Adelante, <span
+    class="highlight">explora</span> y déjanos ser parte de tu
+    viaje de transformación!</p>
+</div>
+<div class="fx-container">
+  <div class="links-container">
+    <div *ngFor="let route of routes">
+      <div class="box">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </div>
+      <h3>{{ route.name }}</h3>
+    </div>
+  </div>
+</div>
