@@ -19,6 +19,7 @@
 
   .logo {
     cursor: pointer;
+    z-index: 99;
 
     img {
       height: 6rem;
@@ -138,6 +139,10 @@
   transform: translateX(-100%);
   transition: transform 0.4s ease-in-out;
 
+  &.open {
+    backdrop-filter: blur(3px);
+  }
+
   .nav-container {
     position: absolute;
     top: 50%;
@@ -152,9 +157,4 @@
       font-size: 2.5em;
     }
   }
-}
-
-.fullscreen-nav.open {
-  z-index: 2;
-  backdrop-filter: blur(3px);
 }

@@ -1,7 +1,12 @@
 <div class="header-container">
-  <a class="logo" [routerLink]="'/'"><img src="assets/images/logo.png" alt="Logo"></a>
+  <a class="logo" [routerLink]="'/'">
+    <img *ngIf="isHamburgerActive" [src]="'assets/images/logo-white.png'" alt="Logo"
+         class="animate__animated animate__fadeIn animate__delay-500ms">
+    <img *ngIf="!isHamburgerActive" [src]="'assets/images/logo.png'"
+         class="animate__animated animate__fadeIn animate__delay" alt="Logo">
+  </a>
 
-  <div class="hamburguer">
+  <div class="hamburger">
     <div class="btn not-active" (click)="toggleHamburger()"
          [ngClass]="{'active': isHamburgerActive, 'not-active': !isHamburgerActive}">
       <span></span>

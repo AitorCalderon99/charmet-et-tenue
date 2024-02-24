@@ -47,3 +47,7 @@ $cursivest-fonts: 'Dancing Script', $cursive-fonts;
     @warn "Breakpoint no definido: #{$breakpoint}.";
   }
 }
+
+.animate__delay-500ms {
+  animation-delay: 0.4s;
+}
