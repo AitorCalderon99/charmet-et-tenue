@@ -42,10 +42,16 @@ body {
 
   max-width: 1300px;
 
-  p {
-    color: #666;
+  p, ul {
+    color: $body-text;
     line-height: 1.6;
   }
+
+  ul {
+    list-style: circle;
+  }
+
+
 }
 
 .highlight {
@@ -53,18 +59,30 @@ body {
   color: $primary-color;
 }
 
-.cursive-header {
+h1, .cursive-header {
   color: $primary-color;
-  font-family: $cursivest-fonts;
-  font-size: 60px;
   cursor: default;
   margin-top: 20px;
   transition: color 0.5s ease-in-out;
 
-
   &:hover {
     color: $secondary-color;
   }
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  color: $primary-color;
+  cursor: default;
+}
+
+.cursive-header {
+  font-size: 60px;
+  font-family: $cursivest-fonts;
 }
 
 .fx-container {
