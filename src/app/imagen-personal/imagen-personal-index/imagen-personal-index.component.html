@@ -1,1 +1,25 @@
-<p>imagen-personal-index works!</p>
+<div class="main-text">
+  <h1 class="cursive-header highlight">Nuestros cursos</h1>
+  <h2>¡descubre nuestros emocionantes cursos diseñados para impulsar tu carrera en el mundo de la
+  moda y más allá!</h2>
+
+  <p>En charme et tenue, te ofrecemos una amplia gama de cursos diseñados para ayudarte a
+  alcanzar tus metas profesionales y personales. Dese iniciarte en la moda hasta perfeccionar tus
+  habilidades de comunicación, tenemos el curso perfecto para ti.</p>
+
+  <p> Nuestros programas están cuidadosamente diseñados para brindarte el conocimiento y las
+  habilidades necesarias para triunfar en la industria de la moda y mas allá.
+  No pierdas la oportunidad de impulsar tu carrera con nuestros cursos especializados, regístrate
+  ahora y da el primer paso hacia e éxito en la moda y más allá.</p>
+</div>
+
+<div class="fx-container">
+  <div class="links-container">
+    <div *ngFor="let route of routes">
+      <div class="box">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </div>
+      <h3>{{ route.name }}</h3>
+    </div>
+  </div>
+</div>
