@@ -1,12 +1,10 @@
 @import "../../styles/variables";
 
 .footer {
-  margin-top: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgba($quaternary-color, 0.5);
   border-top: 3px dotted $quaternary-color;
 
   .container {

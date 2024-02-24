@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: $default-fonts;
   font-size: 16px;
-  background-color: $white-bg;
+  background-color: $color-bg;
   height: 100%;
   color: $black;
 }
@@ -21,8 +21,9 @@ body {
 .main-text {
   margin: 0 auto;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 24px;
   text-align: justify;
+
 
   h1 {
     text-align: center;
@@ -50,8 +51,6 @@ body {
   ul {
     list-style: circle;
   }
-
-
 }
 
 .highlight {
