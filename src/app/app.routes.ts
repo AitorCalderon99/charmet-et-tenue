@@ -38,6 +38,10 @@ import {
   ServiciosParticularesIndexComponent
 } from "./servicios-particulares/servicios-particulares-index/servicios-particulares-index.component";
 import {AsesoriaEventosComponent} from "./servicios-particulares/asesoria-eventos/asesoria-eventos.component";
+import {PierdeElMiedoComponent} from "./imagen-personal/pierde-el-miedo/pierde-el-miedo.component";
+import {
+  CompetenciasComunicativasComponent
+} from "./imagen-personal/competencias-comunicativas/competencias-comunicativas.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -75,6 +79,8 @@ export const routes: Routes = [
       {path: 'iniciacion-moda', component: IniciacionModaComponent},
       {path: 'profesional-moda', component: ProfesionalModaComponent},
       {path: 'experto-moda', component: ExpertoModaComponent},
+      {path: 'pierde-el-miedo-a-hablar', component: PierdeElMiedoComponent},
+      {path: 'competencias-comunicativas', component: CompetenciasComunicativasComponent},
       {path: '**', redirectTo: ''}
     ]
   },
