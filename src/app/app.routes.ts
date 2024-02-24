@@ -37,6 +37,7 @@ import {
 import {
   ServiciosParticularesIndexComponent
 } from "./servicios-particulares/servicios-particulares-index/servicios-particulares-index.component";
+import {AsesoriaEventosComponent} from "./servicios-particulares/asesoria-eventos/asesoria-eventos.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -48,6 +49,7 @@ export const routes: Routes = [
       {path: 'analisis-morfologico', component: AnalisisMorfologicoComponent},
       {path: 'analisis-armario', component: AnalisisArmarioComponent},
       {path: 'asesoria-bodas', component: AsesoriaBodasComponent},
+      {path: 'asesoria-eventos', component: AsesoriaEventosComponent},
       {path: 'asesoria-hombres', component: AsesoriaHombresComponent},
       {path: 'cambio-step', component: CambioStepComponent},
       {path: 'healthy-styling', component: HealthyStylingComponent},
