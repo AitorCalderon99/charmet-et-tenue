@@ -1,0 +1,53 @@
+// Colors
+$primary-color: #7A695D;
+$secondary-color: #AE9C8F;
+$tertiary-color: #E5D2C4;
+$quaternary-color: #F2E8E1;
+$color-bg: rgba($quaternary-color, 0.6);
+
+$white-text: #FFFFFF;
+$white-bg: #FAFAFA;
+$black: #252525;
+$body-text: #252525;
+
+// Breakpoints
+$breakpoints: (
+  'small': 480px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1200px
+);
+
+// Fonts
+$default-fonts: 'Open Sans', Roboto, sans-serif;
+$cursive-fonts: 'Open Sans Italic', $default-fonts;
+$cursivest-fonts: 'Dancing Script', $cursive-fonts;
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/open-sans/OpenSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans Italic';
+  src: url('fonts/open-sans/OpenSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('fonts/DancingScript.ttf') format('truetype');
+}
+
+@mixin media-query($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint no definido: #{$breakpoint}.";
+  }
+}
+
+.animate__delay-500ms {
+  animation-delay: 0.4s;
+}

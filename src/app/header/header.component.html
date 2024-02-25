@@ -1,0 +1,84 @@
+<div class="header-container">
+  <a class="logo" [routerLink]="'/'">
+    <img *ngIf="isHamburgerActive" [src]="'assets/images/logo-white.png'" alt="Logo"
+         class="animate__animated animate__fadeIn animate__delay-500ms">
+    <img *ngIf="!isHamburgerActive" [src]="'assets/images/logo.png'"
+         class="animate__animated animate__fadeIn animate__delay" alt="Logo">
+  </a>
+
+  <div class="hamburger">
+    <div class="btn not-active" (click)="toggleHamburger()"
+         [ngClass]="{'active': isHamburgerActive, 'not-active': !isHamburgerActive}">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <nav class="navbar" aria-label="main-nav">
+    <ul>
+      <li><a class="hover-underline-animation" [routerLink]="'personal-shopper'">PERSONAL SHOPPER</a></li>
+      <li>
+        <a class="hover-underline-animation" [routerLink]="'servicios-particulares'">SERVICIOS PARTICULARES</a>
+        <ul>
+          <li><a [routerLink]="'servicios-particulares/asesoria-belleza'">Asesoría de belleza</a></li>
+          <li><a [routerLink]="'servicios-particulares/analisis-morfologico'">Análisis morfológico</a></li>
+          <li><a [routerLink]="'servicios-particulares/analisis-armario'">Análisis de armario</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-bodas'">Asesoría para bodas</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-eventos'">Asesoría para eventos</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-hombres'">Asesoría para hombres</a></li>
+          <li><a [routerLink]="'servicios-particulares/cambio-step'">Cambio step by step</a></li>
+          <li><a [routerLink]="'servicios-particulares/healthy-styling'">Healthy styling</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-habilidades-comunicativas'">Asesoría de habilidades
+            comunicativas</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="hover-underline-animation" [routerLink]="'organizacion-eventos'">ORGANIZACIÓN DE EVENTOS</a>
+        <ul>
+          <li><a [routerLink]="'organizacion-eventos/wedding-planner'">Wedding planner</a></li>
+          <li><a [routerLink]="'organizacion-eventos/entrega-premios'">Entrega de premios</a></li>
+          <li><a [routerLink]="'organizacion-eventos/convocatorias-vip'">Convocatorias vip</a></li>
+          <li><a [routerLink]="'organizacion-eventos/inaguraciones'">Inauguraciones</a></li>
+          <li><a [routerLink]="'organizacion-eventos/aniversarios-empresas'">Aniversarios de empresas</a></li>
+          <li><a [routerLink]="'organizacion-eventos/presentaciones'">Presentaciones</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="hover-underline-animation" [routerLink]="'imagen-personal'">CURSOS DE IMAGEN PERSONAL</a>
+        <ul>
+          <li><a [routerLink]="'imagen-personal/iniciacion-moda'">Iniciación a la moda</a></li>
+          <li><a [routerLink]="'imagen-personal/profesional-moda'">Profesional de moda</a></li>
+          <li><a [routerLink]="'imagen-personal/experto-moda'">Experto en moda</a></li>
+          <li><a [routerLink]="'imagen-personal/pierde-el-miedo-a-hablar'">Pierde el miedo a hablar en público</a></li>
+          <li><a [routerLink]="'imagen-personal/competencias-comunicativas'">Competencias comunicativas</a></li>
+
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<span class="fullscreen-nav animate__animated"
+      [ngClass]="{'animate__slideInRight': isHamburgerActive, 'open': isHamburgerActive, 'animate__slideOutRight': isHamburgerActive === false}">
+  <div class="nav-container">
+    <nav aria-label="hamburger-nav">
+      <h3>Servicios</h3>
+    <ul>
+      <li><a [routerLink]="'personal-shopper'" (click)="isHamburgerActive = false">PERSONAL SHOPPER</a></li>
+      <li><a [routerLink]="'servicios-particulares'" (click)="isHamburgerActive = false">SERVICIOS PARTICULARES</a></li>
+      <li><a [routerLink]="'organizacion-eventos'" (click)="isHamburgerActive = false">ORGANIZACIÓN DE EVENTOS</a></li>
+      <li><a [routerLink]="'imagen-personal'" (click)="isHamburgerActive = false">CURSOS DE IMAGEN PERSONAL</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h3>Contacto</h3>
+    <ul class="footer-links">
+      <li>Teléfono: +34 123 456 789</li>
+      <li>Email: info&#64;charmeettenue.com</li>
+      <li>Dirección: Calle de la Moda, 123, Madrid</li>
+    </ul>
+  </section>
+  </div>
+</span>

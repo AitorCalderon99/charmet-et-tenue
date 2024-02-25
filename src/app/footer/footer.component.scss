@@ -1,0 +1,71 @@
+@import "../../styles/variables";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 3px dotted $quaternary-color;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 0;
+
+    .border-bottom{
+        border-bottom: 1px solid #6b6b6b;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+
+        h3, p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .text-muted {
+      color: #6c757d;
+      text-align: center;
+    }
+
+    .footer-links, .footer-legal-links {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .footer-legal-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="main-text">
+  <h1 class="cursive-header highlight">Servicios Particulares</h1>
+  <h2>¡Transforma tu imagen!</h2>
+
+  <p>En charme et tenue, ofrecemos todos los servicios que necesitas para alcanzar tu mejor
+    versión.</p>
+
+  <p>Con nuestra metodología Step by Step, lograras un cambio sin perder tu esencia. Nuestro
+    equipo te ayudara y guiara en la búsqueda de lo que desees.</p>
+
+  <p>Descubre con nuestra asesoría como lograr ese cambio que siempre has deseado. Nuestro
+    equipo te ayudara a manejar cualquier aspecto necesario, proporcionándote las herramientas
+    y conocimientos necesarios para que una vez logrado lo que tanto deseas, puedas mantenerlo
+    en el tiempo.</p>
+</div>
+
+<div class="fx-container">
+  <div class="links-container">
+    <div *ngFor="let route of routes">
+      <div class="box" [routerLink]="route.path">
+        <span>IMAGEN</span>
+      </div>
+      <h3>{{ route.name }}</h3>
+    </div>
+  </div>
+</div>

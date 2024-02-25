@@ -1,1 +1,127 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $default-fonts;
+  font-size: 16px;
+  background-color: $color-bg;
+  height: 100%;
+  color: $black;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.main-text {
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 20px 24px;
+  text-align: justify;
+
+
+  h1 {
+    text-align: center;
+  }
+
+  @include media-query('medium') {
+    width: 90%;
+  }
+
+  @include media-query('large') {
+    width: 80%;
+  }
+
+  @include media-query('xlarge') {
+    width: 70%;
+  }
+
+  max-width: 1300px;
+
+  p, ul {
+    color: $body-text;
+    line-height: 1.6;
+  }
+
+  ul {
+    list-style: circle;
+  }
+}
+
+.highlight {
+  font-weight: bold;
+  color: $primary-color;
+}
+
+h1, .cursive-header {
+  color: $primary-color;
+  cursor: default;
+  margin-top: 20px;
+  transition: color 0.5s ease-in-out;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  color: $primary-color;
+  cursor: default;
+}
+
+.cursive-header {
+  font-size: 60px;
+  font-family: $cursivest-fonts;
+}
+
+.fx-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .links-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 64px;
+    margin: 40px;
+    max-width: 1320px; /* Añadido */
+
+    .box {
+      background-color: #6c757d;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+}
