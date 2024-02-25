@@ -1,6 +1,7 @@
 import {Component, HostListener, Inject, Renderer2} from '@angular/core';
 import {CommonModule, DOCUMENT, NgOptimizedImage} from '@angular/common';
-import {RouterLink} from "@angular/router";
+import {NavigationStart, Router, RouterLink} from "@angular/router";
+import {filter} from "rxjs";
 
 
 @Component({
@@ -12,10 +13,15 @@ import {RouterLink} from "@angular/router";
 })
 export class HeaderComponent {
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { }
-
-
   isHamburgerActive: boolean | null = null;
+
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private router: Router) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationStart)
+    ).subscribe(() => {
+      this.renderer.removeClass(this.document.body, 'no-scroll');
+    });
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -27,11 +33,7 @@ export class HeaderComponent {
   }
 
   toggleHamburger() {
+    this.isHamburgerActive ? this.renderer.removeClass(this.document.body, 'no-scroll') : this.renderer.addClass(this.document.body, 'no-scroll');
     this.isHamburgerActive = this.isHamburgerActive ? !this.isHamburgerActive : true;
-    if (this.isHamburgerActive) {
-      this.renderer.addClass(this.document.body, 'no-scroll');
-    } else {
-      this.renderer.removeClass(this.document.body, 'no-scroll');
-    }
   }
 }
