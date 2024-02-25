@@ -13,6 +13,10 @@ body {
   color: $black;
 }
 
+.no-scroll {
+  overflow: hidden !important;
+}
+
 .container {
   margin: 0 auto;
   padding: 16px;

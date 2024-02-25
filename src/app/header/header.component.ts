@@ -1,5 +1,5 @@
-import {Component, HostListener} from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {Component, HostListener, Inject, Renderer2} from '@angular/core';
+import {CommonModule, DOCUMENT, NgOptimizedImage} from '@angular/common';
 import {RouterLink} from "@angular/router";
 
 
@@ -11,6 +11,9 @@ import {RouterLink} from "@angular/router";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { }
+
 
   isHamburgerActive: boolean | null = null;
 
@@ -25,5 +28,10 @@ export class HeaderComponent {
 
   toggleHamburger() {
     this.isHamburgerActive = this.isHamburgerActive ? !this.isHamburgerActive : true;
+    if (this.isHamburgerActive) {
+      this.renderer.addClass(this.document.body, 'no-scroll');
+    } else {
+      this.renderer.removeClass(this.document.body, 'no-scroll');
+    }
   }
 }
