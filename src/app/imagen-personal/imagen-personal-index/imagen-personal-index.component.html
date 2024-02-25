@@ -16,8 +16,8 @@
 <div class="fx-container">
   <div class="links-container">
     <div *ngFor="let route of routes">
-      <div class="box">
-        <a [routerLink]="route.path">{{ route.name }}</a>
+      <div class="box" [routerLink]="route.path">
+        <span>IMAGEN</span>
       </div>
       <h3>{{ route.name }}</h3>
     </div>

@@ -113,6 +113,7 @@ h2 {
       justify-content: center;
       align-items: center;
       transition: transform 0.3s ease-in-out;
+      cursor: pointer;
 
       &:hover {
         transform: scale(1.1);
