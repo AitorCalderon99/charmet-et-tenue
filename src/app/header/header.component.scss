@@ -16,10 +16,6 @@
     justify-content: space-around;
   }
 
-  ul {
-    list-style-type: none;
-  }
-
   .logo {
     cursor: pointer;
     z-index: 99;
@@ -43,50 +39,11 @@
       list-style-type: none;
       padding: 0;
 
+
       li {
         font-size: 1.1em;
         font-weight: 500;
         position: relative;
-
-        a {
-          $hover-color: $primary-color;
-          position: relative;
-          display: inline-block;
-          padding: 10px;
-          text-decoration: none;
-          cursor: pointer;
-          background-image: linear-gradient(
-              to left,
-              $black,
-              $black 50%,
-              $hover-color 50%
-          );
-          background-size: 200% 100%;
-          background-position: -100%;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          transition: all 0.3s ease-in-out;
-
-          &:before {
-            content: '';
-            background: $hover-color;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            transition: all 0.5s ease-in-out;
-          }
-
-          &:hover {
-            background-position: 0;
-
-            &::before {
-              width: 100%;
-            }
-          }
-        }
 
         ul {
           display: none;
@@ -97,8 +54,23 @@
           margin: 0;
           min-width: 100%;
 
+          .expandible-ul {
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            display: block;
+            position: absolute;
+            z-index: 999;
+            left: 100%;
+
+            &.show {
+              opacity: 1;
+            }
+          }
+
           li {
             background-color: $quaternary-color;
+            position: relative;
+            cursor: pointer;
 
             a {
               display: block;
@@ -106,17 +78,19 @@
               color: #000;
               text-decoration: none;
               text-align: left;
+            }
 
-              &:hover {
-                background-color: #f8f8f8;
-              }
+            &:hover {
+              background-color: $tertiary-color;
+              transition: all 0.35s ease-in-out;
+              border-bottom: 1.5px solid $primary-color;
             }
           }
         }
 
         &:hover > ul {
           display: block;
-          animation: fadeIn 0.3s ease;
+          animation: fadeIn 0.6s both;
         }
       }
     }

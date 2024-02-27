@@ -103,7 +103,7 @@ h2 {
     column-gap: 40px;
     row-gap: 64px;
     margin: 40px;
-    max-width: 1320px; /* Añadido */
+    max-width: 1320px;
 
     .box {
       background-color: #6c757d;
@@ -125,3 +125,5 @@ h2 {
     }
   }
 }
+
+html, body { height: 100%; }

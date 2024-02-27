@@ -48,6 +48,46 @@ $cursivest-fonts: 'Dancing Script', $cursive-fonts;
   }
 }
 
+.hover-underline {
+  $hover-color: $primary-color;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  background-image: linear-gradient(
+      to left,
+      $black,
+      $black 50%,
+      $hover-color 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:before {
+    content: '';
+    background: $hover-color;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover {
+    background-position: 0;
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
 .animate__delay-500ms {
   animation-delay: 0.4s;
 }

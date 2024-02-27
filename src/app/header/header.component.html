@@ -17,24 +17,35 @@
 
   <nav class="navbar" aria-label="main-nav">
     <ul>
-      <li><a class="hover-underline-animation" [routerLink]="'personal-shopper'">PERSONAL SHOPPER</a></li>
+      <li><a class="hover-underline" [routerLink]="'personal-shopper'">PERSONAL SHOPPER</a></li>
       <li>
-        <a class="hover-underline-animation" [routerLink]="'servicios-particulares'">SERVICIOS PARTICULARES</a>
+        <a class="hover-underline" [routerLink]="'servicios-particulares'">SERVICIOS PARTICULARES</a>
         <ul>
-          <li><a [routerLink]="'servicios-particulares/asesoria-belleza'">Asesoría de belleza</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-belleza'">Asesoría de belleza</a>
+          </li>
           <li><a [routerLink]="'servicios-particulares/analisis-morfologico'">Análisis morfológico</a></li>
           <li><a [routerLink]="'servicios-particulares/analisis-armario'">Análisis de armario</a></li>
-          <li><a [routerLink]="'servicios-particulares/asesoria-bodas'">Asesoría para bodas</a></li>
-          <li><a [routerLink]="'servicios-particulares/asesoria-eventos'">Asesoría para eventos</a></li>
-          <li><a [routerLink]="'servicios-particulares/asesoria-hombres'">Asesoría para hombres</a></li>
           <li><a [routerLink]="'servicios-particulares/cambio-step'">Cambio step by step</a></li>
+          <ul class="expandible-ul" [ngClass]="{'show': showWeddingNav}">
+            <li><a [routerLink]="'servicios-particulares/asesoria-bodas/novia'">Novia</a></li>
+            <li><a [routerLink]="'servicios-particulares/asesoria-bodas/novio'">Novio</a></li>
+            <li><a [routerLink]="'servicios-particulares/asesoria-bodas/madrina'">Madrina</a></li>
+          </ul>
+          <li>
+            <a class="show-expandible-ul" (click)="toggleWeddingNav()">
+              Asesoría para bodas
+              <span class="icon">{{ showWeddingNav ? '-' : '+' }}</span>
+            </a>
+          </li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-hombres'">Asesoría para hombres</a></li>
+          <li><a [routerLink]="'servicios-particulares/asesoria-eventos'">Asesoría para eventos</a></li>
           <li><a [routerLink]="'servicios-particulares/healthy-styling'">Healthy styling</a></li>
           <li><a [routerLink]="'servicios-particulares/asesoria-habilidades-comunicativas'">Asesoría de habilidades
             comunicativas</a></li>
         </ul>
       </li>
       <li>
-        <a class="hover-underline-animation" [routerLink]="'organizacion-eventos'">ORGANIZACIÓN DE EVENTOS</a>
+        <a class="hover-underline" [routerLink]="'organizacion-eventos'">ORGANIZACIÓN DE EVENTOS</a>
         <ul>
           <li><a [routerLink]="'organizacion-eventos/wedding-planner'">Wedding planner</a></li>
           <li><a [routerLink]="'organizacion-eventos/entrega-premios'">Entrega de premios</a></li>
@@ -45,14 +56,13 @@
         </ul>
       </li>
       <li>
-        <a class="hover-underline-animation" [routerLink]="'imagen-personal'">CURSOS DE IMAGEN PERSONAL</a>
+        <a class="hover-underline" [routerLink]="'imagen-personal'">CURSOS DE IMAGEN PERSONAL</a>
         <ul>
           <li><a [routerLink]="'imagen-personal/iniciacion-moda'">Iniciación a la moda</a></li>
           <li><a [routerLink]="'imagen-personal/profesional-moda'">Profesional de moda</a></li>
           <li><a [routerLink]="'imagen-personal/experto-moda'">Experto en moda</a></li>
           <li><a [routerLink]="'imagen-personal/pierde-el-miedo-a-hablar'">Pierde el miedo a hablar en público</a></li>
           <li><a [routerLink]="'imagen-personal/competencias-comunicativas'">Competencias comunicativas</a></li>
-
         </ul>
       </li>
     </ul>
