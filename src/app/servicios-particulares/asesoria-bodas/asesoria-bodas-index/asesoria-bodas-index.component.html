@@ -1,0 +1,24 @@
+<div class="main-text">
+  <h1 class="cursive-header highlight">Asesoría para bodas</h1>
+  <p>En el emocionante camino hacia el día más importante de sus vidas, ofrecemos una guía experta para asegurarnos de
+    que cada detalle de su boda sea perfecto. Nuestro equipo de asesores de bodas está aquí para hacer que su sueño se
+    convierta en realidad, brindándoles la tranquilidad y confianza que merecen en cada etapa del proceso.</p>
+
+  <p>Ya sea que estén buscando inspiración para el traje perfecto del novio, el vestido de novia de sus sueños o los
+    detalles exquisitos para la madrina, estamos aquí para ayudarles a encontrar exactamente lo que necesitan para ese
+    día tan especial.</p>
+
+  <p>Explore nuestras secciones especializadas para obtener más información y consejos sobre cómo hacer que cada aspecto
+    de su boda sea inolvidable.</p>
+</div>
+
+<div class="fx-container">
+  <div class="links-container">
+    <div *ngFor="let route of routes">
+      <div class="box" [routerLink]="route.path">
+        <span>IMAGEN</span>
+      </div>
+      <h3>{{ route.name }}</h3>
+    </div>
+  </div>
+</div>

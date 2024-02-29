@@ -42,6 +42,18 @@ import {PierdeElMiedoComponent} from "./imagen-personal/pierde-el-miedo/pierde-e
 import {
   CompetenciasComunicativasComponent
 } from "./imagen-personal/competencias-comunicativas/competencias-comunicativas.component";
+import {
+  AsesoriaBodasIndexComponent
+} from "./servicios-particulares/asesoria-bodas/asesoria-bodas-index/asesoria-bodas-index.component";
+import {
+  AsesoriaBodasNoviaComponent
+} from "./servicios-particulares/asesoria-bodas/asesoria-bodas-novia/asesoria-bodas-novia.component";
+import {
+  AsesoriaBodasNovioComponent
+} from "./servicios-particulares/asesoria-bodas/asesoria-bodas-novio/asesoria-bodas-novio.component";
+import {
+  AsesoriaBodasMadrinaComponent
+} from "./servicios-particulares/asesoria-bodas/asesoria-bodas-madrina/asesoria-bodas-madrina.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -52,7 +64,15 @@ export const routes: Routes = [
       {path: 'asesoria-belleza', component: AsesoriaBellezaComponent},
       {path: 'analisis-morfologico', component: AnalisisMorfologicoComponent},
       {path: 'analisis-armario', component: AnalisisArmarioComponent},
-      {path: 'asesoria-bodas', component: AsesoriaBodasComponent},
+      {
+        path: 'asesoria-bodas', component: AsesoriaBodasComponent, children: [
+          {path: '', component: AsesoriaBodasIndexComponent},
+          {path: 'novia', component: AsesoriaBodasNoviaComponent},
+          {path: 'novio', component: AsesoriaBodasNovioComponent},
+          {path: 'madrina', component: AsesoriaBodasMadrinaComponent},
+          {path: '**', redirectTo: ''}
+        ]
+      },
       {path: 'asesoria-eventos', component: AsesoriaEventosComponent},
       {path: 'asesoria-hombres', component: AsesoriaHombresComponent},
       {path: 'cambio-step', component: CambioStepComponent},

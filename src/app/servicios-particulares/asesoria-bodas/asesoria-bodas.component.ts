@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import {RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-asesoria-bodas',
   standalone: true,
-  imports: [],
+    imports: [
+        RouterOutlet
+    ],
   templateUrl: './asesoria-bodas.component.html',
-  styleUrl: './asesoria-bodas.component.scss'
 })
 export class AsesoriaBodasComponent {
 
