@@ -14,8 +14,6 @@ import {filter} from "rxjs";
 export class HeaderComponent {
 
   isHamburgerActive: boolean | null = null;
-  showWeddingNav = false;
-
 
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private router: Router) {
     this.router.events.pipe(
@@ -23,10 +21,6 @@ export class HeaderComponent {
     ).subscribe(() => {
       this.renderer.removeClass(this.document.body, 'no-scroll');
     });
-  }
-
-  toggleWeddingNav() {
-    this.showWeddingNav = !this.showWeddingNav;
   }
 
   @HostListener('window:resize', ['$event'])
