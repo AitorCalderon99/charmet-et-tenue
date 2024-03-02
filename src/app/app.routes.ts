@@ -54,6 +54,15 @@ import {
 import {
   AsesoriaBodasMadrinaComponent
 } from "./servicios-particulares/asesoria-bodas/asesoria-bodas-madrina/asesoria-bodas-madrina.component";
+import {
+  AsesoriaEventosIndexComponent
+} from "./servicios-particulares/asesoria-eventos/asesoria-eventos-index/asesoria-eventos-index.component";
+import {
+  AsesoriaEventosAnfitrionComponent
+} from "./servicios-particulares/asesoria-eventos/asesoria-eventos-anfitrion/asesoria-eventos-anfitrion.component";
+import {
+  AsesoriaEventosInvitadoComponent
+} from "./servicios-particulares/asesoria-eventos/asesoria-eventos-invitado/asesoria-eventos-invitado.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -73,7 +82,14 @@ export const routes: Routes = [
           {path: '**', redirectTo: ''}
         ]
       },
-      {path: 'asesoria-eventos', component: AsesoriaEventosComponent},
+      {
+        path: 'asesoria-eventos', component: AsesoriaEventosComponent, children: [
+          {path: '', component: AsesoriaEventosIndexComponent},
+          {path: 'anfitrion', component: AsesoriaEventosAnfitrionComponent},
+          {path: 'invitado', component: AsesoriaEventosInvitadoComponent},
+          {path: '**', redirectTo: ''}
+        ]
+      },
       {path: 'asesoria-hombres', component: AsesoriaHombresComponent},
       {path: 'cambio-step', component: CambioStepComponent},
       {path: 'healthy-styling', component: HealthyStylingComponent},
