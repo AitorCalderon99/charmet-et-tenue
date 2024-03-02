@@ -1,0 +1,22 @@
+<div class="main-text">
+  <h1 class="cursive-header highlight">Asesoría Para Eventos</h1>
+  <p>En Charme et Tenue nos especializamos en convertir tus eventos en experiencias inolvidables. Ya sea que estés
+    planeando una boda elegante, una fiesta de cumpleaños inolvidable o un evento corporativo de alto nivel, nuestro
+    equipo de expertos está aquí para guiarte en cada paso del camino.</p>
+
+  <p>Con una combinación única de creatividad, atención al detalle y un enfoque personalizado, nos aseguramos de que tu
+    evento sea una verdadera manifestación de tu estilo y visión. Desde la planificación inicial hasta la ejecución
+    impecable el día del evento, estamos comprometidos a hacer que cada momento sea memorable para ti y tus invitados.
+    Descubre cómo podemos hacer que tus sueños se hagan realidad con Charme et Tenue.</p>
+</div>
+
+<div class="fx-container">
+  <div class="links-container">
+    <div *ngFor="let route of routes">
+      <div class="box" [routerLink]="route.path">
+        <span>IMAGEN</span>
+      </div>
+      <h3>{{ route.name }}</h3>
+    </div>
+  </div>
+</div>
