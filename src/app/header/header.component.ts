@@ -14,6 +14,9 @@ import {filter} from "rxjs";
 export class HeaderComponent {
 
   isHamburgerActive: boolean | null = null;
+  showWeddingNav = false;
+  showEventsNav = false;
+
 
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document, private router: Router) {
     this.router.events.pipe(
