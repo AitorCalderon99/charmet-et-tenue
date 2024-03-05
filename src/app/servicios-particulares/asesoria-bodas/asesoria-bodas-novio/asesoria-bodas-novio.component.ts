@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-asesoria-bodas-novio',
   standalone: true,
   imports: [],
-  templateUrl: './asesoria-bodas-novio.component.html'
+  templateUrl: './asesoria-bodas-novio.component.html',
+  styleUrl: './asesoria-bodas-novio.component.scss'
 })
 export class AsesoriaBodasNovioComponent {
 

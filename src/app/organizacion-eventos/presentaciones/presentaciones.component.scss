@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+
+img {
+  width: 100%;
+  float: none;
+  margin: 0 0 10px 0;
+}
+
+@include media-query('medium') {
+  img {
+    width: 550px;
+    float: right;
+    min-width: 250px;
+    margin: 0 0 10px 30px;
+  }
+}
