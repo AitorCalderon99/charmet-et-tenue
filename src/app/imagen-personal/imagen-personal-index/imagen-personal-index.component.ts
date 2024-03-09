@@ -16,6 +16,8 @@ export class ImagenPersonalIndexComponent {
   routes = [
     { path: 'iniciacion-moda', name: 'Iniciación a la moda' },
     { path: 'profesional-moda', name: 'Profesional de moda' },
-    { path: 'experto-moda', name: 'Experto en moda' }
+    { path: 'experto-moda', name: 'Experto en moda' },
+    { path: 'pierde-el-miedo', name: 'Pierde el miedo a hablar en público' },
+    { path: 'competencias-comunicativas', name: 'Competencias comunicativas' },
   ];
 }

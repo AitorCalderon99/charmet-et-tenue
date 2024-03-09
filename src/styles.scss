@@ -100,29 +100,32 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     column-gap: 40px;
     row-gap: 64px;
     margin: 40px;
     max-width: 1320px;
 
-    .box {
-      background-color: #6c757d;
+    > div{
       width: 300px;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.3s ease-in-out;
-      cursor: pointer;
+      height: auto;
+      .box {
+        background-color: #6c757d;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
 
-      &:hover {
-        transform: scale(1.1);
+        &:hover {
+          transform: scale(1.1);
+        }
       }
-    }
 
-    h3 {
-      text-align: center;
+      h3 {
+        text-align: center;
+      }
     }
   }
 }
