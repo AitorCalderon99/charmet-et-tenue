@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NgForOf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 
@@ -14,7 +14,15 @@ import {RouterLink} from "@angular/router";
 })
 export class AsesoriaEventosIndexComponent {
   routes = [
-    {path: 'anfitrion', name: 'Asesoría Anfitrión'},
-    {path: 'invitado', name: 'Asesoría Invitado'},
+    {
+      path: 'anfitrion',
+      name: 'Asesoría Anfitrión',
+      image: 'assets/images/categories/sub-categories/asesoria-anfitrion.png'
+    },
+    {
+      path: 'invitado',
+      name: 'Asesoría Invitado',
+      image: 'assets/images/categories/sub-categories/asesoria-invitados.png'
+    },
   ];
 }

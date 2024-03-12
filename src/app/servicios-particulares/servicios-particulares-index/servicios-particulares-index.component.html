@@ -18,7 +18,7 @@
   <div class="links-container">
     <div *ngFor="let route of routes">
       <div class="box" [routerLink]="route.path">
-        <span>IMAGEN</span>
+        <img [src]="route.image" alt="">
       </div>
       <h3>{{ route.name }}</h3>
     </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {NgForOf} from "@angular/common";
 
@@ -14,10 +14,30 @@ import {NgForOf} from "@angular/common";
 })
 export class ImagenPersonalIndexComponent {
   routes = [
-    { path: 'iniciacion-moda', name: 'Iniciación a la moda' },
-    { path: 'profesional-moda', name: 'Profesional de moda' },
-    { path: 'experto-moda', name: 'Experto en moda' },
-    { path: 'pierde-el-miedo', name: 'Pierde el miedo a hablar en público' },
-    { path: 'competencias-comunicativas', name: 'Competencias comunicativas' },
+    {
+      path: 'iniciacion-moda',
+      name: 'Iniciación a la moda',
+      image: 'assets/images/categories/sub-categories/iniciacion-moda.png'
+    },
+    {
+      path: 'profesional-moda',
+      name: 'Profesional de moda',
+      image: 'assets/images/categories/sub-categories/profesional-moda.png'
+    },
+    {
+      path: 'experto-moda',
+      name: 'Experto en moda',
+      image: 'assets/images/categories/sub-categories/experto-moda.png'
+    },
+    {
+      path: 'pierde-el-miedo',
+      name: 'Pierde el miedo a hablar en público',
+      image: 'assets/images/categories/sub-categories/pierde-el-miedo.png'
+    },
+    {
+      path: 'competencias-comunicativas',
+      name: 'Competencias comunicativas',
+      image: 'assets/images/categories/sub-categories/competencias-comunicativas.png'
+    },
   ];
 }
